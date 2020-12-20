@@ -1,4 +1,4 @@
-import CartItem from "./CartItem"
+import CartItem from './CartItem'
 import React from'react';
 function App() {
   return (
@@ -9,5 +9,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
