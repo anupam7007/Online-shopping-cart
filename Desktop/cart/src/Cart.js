@@ -89,11 +89,14 @@ render()
            {/* <CartItem qty={1} price={9999} title={"watch"} img={ ' '} /> 
            <CartItem /> 
            <CartItem /> 
+        
          {/* {arr.map((item)=>{ */}
              {/* return item+5 */}
          {/* })    } */}
+        
      </div> 
  );
 }
 }     
+
 export default Cart

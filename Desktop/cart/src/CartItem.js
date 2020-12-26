@@ -49,7 +49,7 @@ render()
         }=this.props;
      return(  
   //  Note that when the bracket was on the next line it was not working when we put it upwards it worked 
-        <div className="cart-item">
+        <div className="cart-item" style={styles.spacing}>
             <div className="left-block">
               <img style={styles.image} />
             </div> 
@@ -77,6 +77,9 @@ const styles = {
       width: 110,
       borderRadius: 4,
       background: '#ccc'
+    },
+    spacing:{
+        marginLeft:180
     }
   }
     export default CartItem; 
