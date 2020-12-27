@@ -1,6 +1,7 @@
 import React from 'react'
-class CartItem extends React.Component
-{
+//class CartItem extends React.Component    // this partwe change inorder to make the navbar functional
+const CartItem=(props)=>{
+
 // NOW WE COMMENT THE ENTIRE PART AND COPY IT IN THE CART.JS 
     // constructor(){
     //     super();
@@ -34,19 +35,21 @@ class CartItem extends React.Component
     //    //    for the rest of the functionalities we generally copy and paste the stuff 
            
     //    }
-render()
-{
-     console.log('this.props',this.props);
+//render()   we even remove this for making the navbar functional
+
+     //console.log('this.props',this.props);  removing while making navbar functional
     //  the above line was added after studying props
     //  const { price,title,qty }=this.state 
     // this was done earlier now we use props
-    const { price,title,qty }=this.props.product;
+    
+    // const { price,title,qty }=this.props.product;
+    const { price,title,qty }=props.product;
     const{
         product,
         onIncreaseQuantity,
         onDecreaseQuantity,
         handleDeleteProduct
-        }=this.props;
+        }=props;
      return(  
   //  Note that when the bracket was on the next line it was not working when we put it upwards it worked 
         <div className="cart-item" style={styles.spacing}>
@@ -60,17 +63,17 @@ render()
                 <div className="cart-item-actions">
                     {/* buttons */}
                     <img alt="increase"className="action-icons"src="https://img.icons8.com/pastel-glyph/2x/plus.png"
-                     onClick={() => this.props.onIncreaseQuantity(this.props.product)} />
+                     onClick={() => props.onIncreaseQuantity(props.product)} />
                     <img alt="decrease"className="action-icons"src="https://img.icons8.com/pastel-glyph/2x/minus.png"
-                    onClick={()=>this.props.onDecreaseQuantity(this.props.product)} />
+                    onClick={()=>props.onDecreaseQuantity(props.product)} />
                     <img alt="delete"className="action-icons"src="https://img.icons8.com/windows/2x/delete-forever.png"
-                    onClick={()=>this.props.handleDeleteProduct(product.id)} />
+                    onClick={()=>props.handleDeleteProduct(product.id)} />
                 </div>
             </div>
         </div>    
     );
 }    
-}     
+ 
 const styles = {
     image: {
       height: 110,
